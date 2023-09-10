@@ -1,0 +1,21 @@
+# Create the data frame
+Df<- data.frame(
+  Name = c("Ram", "Alwin", "Billy", "Amera", "Olive", "Dora"),
+  Age = c(30, 35, 22, 16, 42, 59),
+  Height = c(177, 164, 155, 180, 124, 150),
+  Weight = c(57, 48,  45, 60, 52, 55),
+  Gender = c("M", "F", "M", "F", "F", "F")
+)
+
+# Invert the Gender column
+Df$Gender <- ifelse(Df$Gender == "M", "F", "M")
+
+data2 <- data.frame(
+  
+  Working = c("Y", "N", "Y", "N", "Y", "N"),
+  stringsAsFactors = FALSE
+  )
+  
+  combined_data <- cbind( Df, data2)
+# Display the updated data frame
+print(combined_data)
