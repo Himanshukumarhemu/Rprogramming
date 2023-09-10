@@ -1,0 +1,14 @@
+data("mtcars")
+View(mtcars)
+# Define the variables and colors
+variables <- c("mpg", "hp", "drat", "qsec")
+colors <- c("blue", "black", "yellow", "purple")
+
+# Create an empty plot
+plot(mtcars[, variables[1]], type = "n", xlab = "Index", ylab = "Value" , main="miles vs axel")
+
+# Loop through variables and colors
+for (i in 1:length(variables)) {
+  lines(mtcars[, variables[i]], type = "o", col = colors[i])
+  points(mtcars[, variables[i]], col = colors[i])
+}
