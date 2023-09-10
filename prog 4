@@ -1,0 +1,19 @@
+# Nested for loop
+for (a in 1:3) {  # Outer loop, increments "a" 3 time
+  for (b in 1:3) {  # Inner loop, increments "b" 3 times
+    if (b > 2) {
+      break  # Exit the inner loop after 2 incrementations of "b"
+    }
+    cat("a:", a, "b:", b, "\n")
+  }
+}
+# While loop with next statement
+i <- 2
+while (i <= 5) {
+  if (i == 3) {
+    i <- i + 1
+    next  # Skip printing the number 3
+  }
+  cat("i:", i, "\n")
+  i <- i + 1
+}
