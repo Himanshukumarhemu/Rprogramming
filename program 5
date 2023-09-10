@@ -1,0 +1,18 @@
+count_and_print_divisors <- function(n) {
+  divisors <- integer(0)  # Create an empty vector to store divisors
+  
+  # Find divisors of 'n'
+  for (i in 2:(n - 1)) {
+    if (n %% i == 0) {
+      divisors <- c(divisors, i)  # Add divisor to the vector
+    }
+  }
+  
+  divisor_count <- length(divisors)  # Count of divisors
+  
+  cat("Divisors of", n, "are:", paste(divisors, collapse = ", "), "\n")
+  cat("Number of divisors (excluding 1 and itself):", divisor_count, "\n")
+}
+
+# Test the function with an example
+count_and_print_divisors(28)
